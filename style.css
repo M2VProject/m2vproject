@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bangers', cursive;
+    background: url(pubg.jpg);
+    background-attachment: fixed;
+}
+
+header{
+    position: relative;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.logo{
+    color: maroon;
+    height: 50px;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav{
+    float: right;
+}
+
+.clearfix{
+    clear: both;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lobster', cursive;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: maroon;
+    color: rgb(0, 255, 255);
+    transition: 0.5s;
+}
+
+@media (max-width: 1200px){
+    header{
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .menu-toggle{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        float: right;
+        cursor: pointer;
+        font-size: 30px;
+        text-align: center;
+        color: maroon;
+    }
+    .menu-toggle:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+
+    .menu-toggle.active:before{
+        content: '\f00d';
+    }
+
+    nav{
+        display: none;
+    }
+    nav.active{
+        display: block;
+        width: 100%;
+    }
+    nav.active ul{
+        display: block;
+    }
+    nav.active ul li{
+        margin: 0;
+    }
+}
+
+
